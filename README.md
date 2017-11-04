@@ -11,11 +11,11 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 ## Usage
 
-› Press i to open iOS emulator.
-› Press q to display QR code.
-› Press r to restart packager, or R to restart packager and clear cache.
-› Press d to toggle development mode. (current mode: development)
+* Press i to open iOS emulator.
+* Press q to display QR code.
+* Press r to restart packager, or R to restart packager and clear cache.
+* Press d to toggle development mode. (current mode: development)
 
-*Note:* The project will work only on iOS for now.
+**Note:** The project will work only on iOS for now.
 
 ![QR Code](https://github.com/jayasim/reactnd-mobile-flashcards/blob/master/images/flashcards-qr-code-for-expo.png)
