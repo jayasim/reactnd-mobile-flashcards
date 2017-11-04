@@ -45,7 +45,7 @@ export default class FinalGameScene extends Component {
 
     if (finalScore === 0)
       return {
-        message: "0 points? Dude?",
+        message: "0 points? Try your luck Again!",
         width: 300,
         heigth: 300,
         file: require("./../utils/animations/shrug.json")
