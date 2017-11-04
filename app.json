@@ -1,5 +1,20 @@
 {
   "expo": {
-    "sdkVersion": "21.0.0"
-  }
+    "sdkVersion": "21.0.0",
+    "orientation": "portrait",
+    "name": "Mobile Flashcards",
+    "description": "The best way to enhance knowledge - Through Quiz!",
+    "slug": "mobile-flashcards",
+    "version": "1.0",
+    "icon": "flashcards-qr-code-for-expo.png",
+    "notification": {
+      "icon": "flashcards-qr-code-for-expo.png"
+    },
+    "ios": {
+     "bundleIdentifier": "com.jayasim.mobile-flashcards",
+    },
+    "android": {
+     "package": "com.jayasim.mobile-flashcards",
+    }
+  },
 }
