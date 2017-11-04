@@ -18,4 +18,4 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 *Note:* The project will work only on iOS for now.
 
-![QR Code]()
+![QR Code](https://github.com/jayasim/reactnd-mobile-flashcards/blob/master/images/flashcards-qr-code-for-expo.png)
