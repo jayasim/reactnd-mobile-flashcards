@@ -1,11 +1,32 @@
 import React from "react"
 import { Text, View, StatusBar, Dimensions } from "react-native"
+import {
+  H1,
+  H2,
+  Header,
+  Body,
+  Icon,
+  Left,
+  Right,
+  Title
+} from "native-base"
 import styled from "styled-components/native"
 import { Button, Spinner } from "nachos-ui"
 import reducer from "./reducers"
 import { createStore } from "redux"
 import { Provider } from "react-redux"
-
+import { blue, black, white } from "./utils/colors"
+import { Constants } from "expo"
+import { connect } from "react-redux"
+import HomeScreen from "./components/HomeScreen"
+import { TabNavigator, StackNavigator } from "react-navigation"
+import NewDeckScreen from "./components/NewDeckScreen"
+import NewQuestionScreen from "./components/NewQuestionScreen"
+import DeckDetailScreen from "./components/DeckDetailScreen"
+import GameScene from "./components/GameScene"
+import Flashcard from "./components/Flashcard"
+import OnBoarding from "./components/OnBoarding"
+import * as API from "./utils/api"
 
 const OnboardingScreen = {
   OnBoarding: {
@@ -38,6 +59,12 @@ const StackScreens = {
   },
   NewDeck: {
     screen: NewDeckScreen
+  },
+  Game: {
+    screen: GameScene,
+    navigationOptions: {
+      header: null
+    }
   }
 }
 
@@ -56,9 +83,12 @@ API.getUnboardingSeen().then(seen => {
 export default class App extends React.Component {
   render() {
     return (
+      <View style={{ flex: 1 }}>
+
       <Provider store={createStore(reducer)}>
         <View style={{ flex: 1 }}>{AllScreens && <MainNavigator />}</View>
       </Provider>
+    </View>
     )
   }
 }
