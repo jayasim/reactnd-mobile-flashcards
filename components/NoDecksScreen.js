@@ -1,11 +1,25 @@
 import React, { Component } from "react"
 import { View, StyleSheet } from "react-native"
-import { Container, Content, Body, Text, Button } from "native-base"
+import { Container, Content, Body, Text, Button,Header,
+Icon,
+Left,
+Right,
+Title } from "native-base"
 
 export default class NoDecksScreen extends Component {
   render() {
     return (
       <Container>
+        <Header>
+          <Left>
+            <Button transparent>
+            </Button>
+          </Left>
+          <Body>
+            <Title>Home</Title>
+          </Body>
+          <Right />
+        </Header>
         <Body>
           <Content>
             <Text style={styles.h1}>No Decks yet!</Text>

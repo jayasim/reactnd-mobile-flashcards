@@ -12,6 +12,13 @@ import { H1, Button, Text } from "native-base"
   when it comes...and when it goes too! */
 
 class NewDeckScreen extends Component {
+
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: "Add New Deck"
+    }
+  }
+
   state = {
     newName: "",
     emptyFieldError: false
