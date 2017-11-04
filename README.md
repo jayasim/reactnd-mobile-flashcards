@@ -17,7 +17,7 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 * Press r to restart packager, or R to restart packager and clear cache.
 * Press d to toggle development mode. (current mode: development)
 
-## How to install
+## How to install and run on iOS
 
 The application requires only yarn install and yarn start to install and launch. npm can be used in place of yarn
 
