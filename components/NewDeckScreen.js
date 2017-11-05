@@ -8,6 +8,8 @@ import * as API from "./../utils/api"
 import { setDecks } from "./../actions"
 import { H1, Button, Text } from "native-base"
 
+import { generateId, objectToArray } from "./../utils/utils"
+
 /*TODO: animate the «can't be empty» Bubble,
   when it comes...and when it goes too! */
 
@@ -103,7 +105,13 @@ function mapDispatchToProps(dispatch, { navigation }) {
           API.fetchDecks()
             .then(decks => {
               dispatch(setDecks(decks))
-              navigation.goBack()
+
+              let decksArray = objectToArray(decks)
+
+              let decksArrayObj = decksArray.filter((deck) => deck.name === deckName);
+
+              navigation.navigate('DeckDetail', { deckIndex: decksArrayObj[0].key })
+
             })
             .catch(e => {
               console.log(e)

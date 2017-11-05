@@ -85,7 +85,7 @@ export default class FinalGameScene extends Component {
 
   componentDidMount() {
 
-    clearLocalNotification()
+    //clearLocalNotification()
 
     Animated.timing(this.state.progress, {
       toValue: 1,
