@@ -9,8 +9,7 @@ export function clearLocalNotification() {
   )
 }
 
-function createNotification() {
-  return {
+const createNotification = () => ({
     title: "Become a better you! Study!",
     body: "Learn something new every day. Practice flashcards NOW!",
     ios: {
@@ -22,8 +21,7 @@ function createNotification() {
       vibrate: true,
       priority: "high"
     }
-  }
-}
+})
 
 export function setLocalNotification() {
   AsyncStorage.getItem(NOTIFICATION_KEY)

@@ -94,9 +94,13 @@ class HomeScreen extends Component {
   }
 }
 
+/*
 function mapStateToProps(state) {
   return { listScrollPosition: state.scrollPosition }
 }
+*/
+
+const mapStateToProps = ({ scrollPosition }) => ({ listScrollPosition: scrollPosition });
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -107,7 +111,6 @@ function mapDispatchToProps(dispatch) {
           dispatch(setDecks(decks))
           alert("Cleared all the decks")
           this.setState({'listScrollPosition':state.scrollPosition});
-          //this.props.navigation.navigate("OnBoarding", {})
         })
         .catch(e => {
           console.log(e)
