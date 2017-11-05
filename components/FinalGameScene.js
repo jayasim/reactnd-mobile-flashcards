@@ -30,10 +30,6 @@ export default class FinalGameScene extends Component {
     }
   }
 
-  componentDidMount() {
-    clearLocalNotification()
-  }
-
   getAnimationFile = () => {
     const points = this.props.points
     const questions = this.props.total
@@ -88,10 +84,17 @@ export default class FinalGameScene extends Component {
   }
 
   componentDidMount() {
+
+    clearLocalNotification()
+
     Animated.timing(this.state.progress, {
       toValue: 1,
       duration: 2000
     }).start()
+  }
+
+  componentWillUnmount(){
+    this.state.progress.removeAllListeners()
   }
 
   goBack() {
